@@ -11,5 +11,10 @@ class Settings(BaseSettings):
     DATABRICKS_TOKEN: SecretStr = Field(None, env="DATABRICKS_TOKEN")
     DATABRICKS_HOST: str = Field(None, env="DATABRICKS_HOST")
     UPLOADED_FILES_PATH: str = Field()
+    S3_BUCKET: str = Field()
+    S3_ENDPOINT: str = Field()
+    AWS_ACCESS_KEY: str = Field()
+    AWS_SECRET_KEY: SecretStr = Field()
+    AWS_REGION: str = Field()
 
 config = Settings()
