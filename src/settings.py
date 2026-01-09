@@ -10,5 +10,6 @@ class Settings(BaseSettings):
 
     DATABRICKS_TOKEN: SecretStr = Field(None, env="DATABRICKS_TOKEN")
     DATABRICKS_HOST: str = Field(None, env="DATABRICKS_HOST")
+    UPLOADED_FILES_PATH: str = Field()
 
 config = Settings()
