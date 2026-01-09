@@ -8,7 +8,7 @@ class Settings(BaseSettings):
         validate_default=False,
     )
 
-    DATABRICKS_TOKEN: SecretStr | None = Field(None, env="DATABRICKS_TOKEN")
-    DATABRICKS_HOST: str | None = Field(None, env="DATABRICKS_HOST")
+    DATABRICKS_TOKEN: SecretStr = Field(None, env="DATABRICKS_TOKEN")
+    DATABRICKS_HOST: str = Field(None, env="DATABRICKS_HOST")
 
 config = Settings()

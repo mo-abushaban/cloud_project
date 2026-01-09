@@ -4,8 +4,9 @@ from src.settings import config
 
 w = WorkspaceClient(
   host  = config.DATABRICKS_HOST,
-  token = config.DATABRICKS_TOKEN,
+  token = config.DATABRICKS_TOKEN.get_secret_value(),
 )
+
 for c in w.clusters.list():
   print(c.cluster_name)
 
