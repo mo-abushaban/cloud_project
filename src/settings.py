@@ -8,8 +8,6 @@ class Settings(BaseSettings):
         validate_default=False,
     )
 
-    DATABRICKS_TOKEN: SecretStr = Field(None, env="DATABRICKS_TOKEN")
-    DATABRICKS_HOST: str = Field(None, env="DATABRICKS_HOST")
     UPLOADED_FILES_PATH: str = Field()
     S3_BUCKET: str = Field()
     S3_ENDPOINT: str = Field()
