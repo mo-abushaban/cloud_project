@@ -50,3 +50,8 @@ aws emr add-steps \
 
 https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-commandrunner.html
 
+
+Start the APP:
+```
+uv run ./main.py
+```

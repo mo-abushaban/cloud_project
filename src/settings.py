@@ -8,11 +8,11 @@ class Settings(BaseSettings):
         validate_default=False,
     )
 
-    UPLOADED_FILES_PATH: str = Field()
     S3_BUCKET: str = Field()
     S3_ENDPOINT: str = Field()
     AWS_ACCESS_KEY: str = Field()
     AWS_SECRET_KEY: SecretStr = Field()
     AWS_REGION: str = Field()
+    EMR_CLUSTER_ID: str = Field()
 
 config = Settings()
